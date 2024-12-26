@@ -1,16 +1,21 @@
 
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Streamlit Title
-st.title("Jupyter Notebook to Streamlit")
+st.title("Case Study Machine Learning GDGoC Sriwijaya University 2024/2025")
 
-# Upload the file (if applicable)
-uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
-if uploaded_file is not None:
-    import pandas as pd
-    df = pd.read_csv(uploaded_file)
-    st.write("Data preview:")
-    st.write(df)
+st.write("Ridwan Akrom")
+st.write("Sistem Komputer")
+
+# Data Wrangling
+st.subheader("1.Data Wrangling")
+st.subheader("Dataset yang Digunakan")
+st.write("Dataset yang digunakan dalam kasus ini adalah StudentPerformanceFactors.csv")
+df = pd.read_csv("StudentPerformanceFactors.csv")
+st.write(df)
 
 # Code extracted from the Jupyter Notebook
 # Adapt the core functionality here
